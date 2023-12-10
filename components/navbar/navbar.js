@@ -43,15 +43,16 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                {session.user.role == "doctor" && 
-                <Link
-                  href="/doctors-schedules"
-                  className="py-3  text-purple-800 w-full hover:text-purple-500 hover:underline"
-                >
-                  <span className="text-md text-purple-800 font-bold">
-                    Doctor's Schedule
-                  </span>
-                </Link>}
+                {session?.user?.role == "doctor" && (
+                  <Link
+                    href="/doctors-schedules"
+                    className="py-3  text-purple-800 w-full hover:text-purple-500 hover:underline"
+                  >
+                    <span className="text-md text-purple-800 font-bold">
+                      Doctor's Schedule
+                    </span>
+                  </Link>
+                )}
               </li>
               <li>
                 <Link
@@ -95,7 +96,13 @@ const Navbar = () => {
               </Link>
             )}
           </div>
-
+          {session?.user?.role == "doctor" && (
+            <Link href={"/doctor-profile"}>
+              <div className="flex items-center bg-gray-100 px-3  my-4 py-3 rounded-full">
+                <span className="text-purple-500 ml-1">Create Profile</span>
+              </div>
+            </Link>
+          )}
           <span
             onClick={() => {
               setShowNav(!showNav);

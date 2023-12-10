@@ -22,7 +22,7 @@ model User {
 
 model DoctorProfile {
   id             String              @id @default(auto()) @map("_id") @db.ObjectId
-  userId         String              @unique @db.ObjectId // Add @db.ObjectId here
+  userId         String              @unique @db.ObjectId 
   name           String
   email          String
   specialization String
@@ -38,8 +38,8 @@ model DoctorProfile {
 
 model PatientAppointment {
   id               String    @id @default(auto()) @map("_id") @db.ObjectId
-  userId           String              @db.ObjectId // Add @db.ObjectId here
-  doctorProfileId  String              @db.ObjectId // Add @db.ObjectId here
+  userId           String              @db.ObjectId 
+  doctorProfileId  String              @db.ObjectId
   appointmentDate  String
   appointmentTime  String
   duration         String
