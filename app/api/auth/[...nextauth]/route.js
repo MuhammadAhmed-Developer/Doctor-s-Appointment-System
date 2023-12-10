@@ -2,6 +2,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { compare } from "bcrypt";
 import { connectDB } from "@/src/lib/db";
+import prisma from "@/prisma";
 
 
 export const authOptions = {
