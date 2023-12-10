@@ -10,7 +10,7 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 
 const Navbar = () => {
   const { data: session, status } = useSession();
-  console.log("session", session, status);
+  // console.log("session", session, status);
 
   const [showNav, setShowNav] = useState(false);
   return (
@@ -43,7 +43,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                {session?.user?.role == "doctor" && (
+                {session?.user?.role == "patient" && (
                   <Link
                     href="/doctors-schedules"
                     className="py-3  text-purple-800 w-full hover:text-purple-500 hover:underline"

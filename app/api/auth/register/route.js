@@ -1,7 +1,7 @@
-import prisma from "@/prisma";
 import { connectDB } from "@/src/lib/db";
 import { hash } from "bcrypt";
 import { NextResponse } from "next/server";
+import prisma from "@/prisma";
 
 export const POST = async (req) => {
   try {

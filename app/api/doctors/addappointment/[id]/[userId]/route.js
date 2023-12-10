@@ -4,6 +4,8 @@ import {NextResponse} from "next/server"
 
 export const POST = async (req) => {
   try {
+    const { id, userid } = await req.params;
+console.log("idddddd", id);
     const { name, email,  phoneno,description , userId , appointmentDate, appointmentTime, doctorProfileId, duration} =  await req.json();
     if (!name || !email || !phoneno || !description || !appointmentDate || !appointmentTime || !userId ||!doctorProfileId  ||!duration) {
       return NextResponse.json(
