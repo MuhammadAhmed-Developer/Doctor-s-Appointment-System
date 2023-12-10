@@ -18,7 +18,7 @@ export default function DoctorsSchedule() {
     // Example function to handle button click
 function handleButtonClick(id) {
       // console.log(id)
-      router.push(`/`)
+      router.push(`/appointments-form`)
 }
 
     return (

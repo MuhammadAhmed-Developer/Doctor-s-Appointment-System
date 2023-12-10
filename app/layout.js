@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import "../src/config/toastify"
 import AuthContext from '@/src/config/AuthContext';
 import Topbar from '@/components/topbar/topbar';
+import Footer from '@/components/footer/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,11 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} >
         <AuthContext>
-          <Topbar/>
+          {/* <Topbar/> */}
         {children}
         </AuthContext>
         <ToastContainer/>
-        {/* <Footer/> */}
+        <Footer/>
         </body>
     </html>
   )

@@ -56,7 +56,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="/contsctus"
+                  href="/contact"
                   className="py-3  text-purple-800 w-full hover:text-purple-500 hover:underline"
                 >
                   <span className="text-md">Contact Us</span>
