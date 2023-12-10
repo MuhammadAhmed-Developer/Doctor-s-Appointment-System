@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh
+}
+
+main{
+  flex: 1 0 auto;
+} */
