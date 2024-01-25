@@ -39,7 +39,7 @@ const [Loading, setLoading] = useState(false)
     try {
       setLoading(true);
   
-      const res = await fetch("api/doctors/addappointment", {
+      const res = await fetch(`api/doctors/addappointment/${id}/${userId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
